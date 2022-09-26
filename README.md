@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Multimedia - HTML 5</title>
+    <link rel="stylesheet" href="d.css">
+</head>
+<body>
+    <h2 align="center" style="color:aliceblue">Tugas Multimedia - HTML 5</h2>
+    <p  align="center">
+        <button onclick="durationVid()" type="button" >Duration</button>
+        <button onclick="playVid()" type="button" >Play Video</button>
+        <button onclick="pauseVid()" type="button" >Pause Video</button>
+        <button onclick="enabledCon()" type="button" >Enable Controls</button>
+        <button onclick="disabledCon()" type="button" >Disable Controls</button>
+    </p>
+    <p align="center">
+        <video id="myVideo" width="1000" length="1000" align="center">
+            <source src="s.mp4" type="video/mp4" >
+        </video>
+    </p>
+
+</body>
+<script>
+var vid = document.getElementById("myVideo");
+
+    function playVid() {
+        vid.play();
+    }
+    function durationVid() {
+        alert(vid.duration);
+    }
+    
+    function pauseVid() {
+        vid.pause();
+    }
+    function enabledCon() {
+        vid.controls = true;
+        vid.load();
+    }
+    function disabledCon() {
+        vid.controls = false;
+        vid.load();
+    }
+    
+ </script>
+</html>
